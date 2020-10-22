@@ -1,7 +1,7 @@
 {
   "name": "app",
   "version": "1.0.0",
-  "description": "",
+  "description": "placeholder",
   "main": "server.js",
   "dependencies": {
     "express": "^4.17.1",
@@ -13,5 +13,13 @@
     "start": "node server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmhunt1/fitnessapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wmhunt1/fitnessapp/issues"
+  },
+  "homepage": "https://github.com/wmhunt1/fitnessapp#readme"
 }
