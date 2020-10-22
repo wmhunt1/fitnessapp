@@ -9,11 +9,28 @@ const workoutSchema = new Schema({
         unique: true,
         required: true
     },
-    exercises: [{
-        //should allow for cardio or resistance
-        type: Schema.Types.ObjectId,
-        ref: "Exercise"
-    }]
+    workoutType: {
+        type: String,
+        required: true
+    },
+    distance: {
+        type: Number,
+        required: false
+    },
+    duration: {
+        type: Number,
+        required: "duration in minutes"
+    },
+    weight: {
+        type: Number,
+    },
+    sets: {
+        type: Number,
+    },
+    reps: {
+        type: Number,
+    },
+    
 });
 
 const exerciseSchema = new Schema({
@@ -28,6 +45,5 @@ const exerciseSchema = new Schema({
 });
 
 const Workout = mongoose.model("Workout", workoutSchema);
-const Exercise = mongoose.model("Exercise", exerciseSchema);
 
-module.exports = {Workout, Exercise};
+module.exports = {Workout};
