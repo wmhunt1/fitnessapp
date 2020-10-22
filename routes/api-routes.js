@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const Workout = require("../models/workout-model.js");
 
+//need to work on this
 router.post("/api/workouts", ({ body }, res) => {
   Workout.create(body)
     .then(dbWorkout => {

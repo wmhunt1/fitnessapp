@@ -1,4 +1,3 @@
-//basics borrowed from https://github.com/DreissenZulu/MongoDB-Fitness-Tracker
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
@@ -13,9 +12,9 @@ const workoutSchema = new Schema({
         type: String,
         required: true
     },
+    //will only fill depending on if cardio or resistance
     distance: {
         type: Number,
-        required: false
     },
     duration: {
         type: Number,
@@ -33,16 +32,6 @@ const workoutSchema = new Schema({
     
 });
 
-const exerciseSchema = new Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    reps: {
-        type: Number,
-        required: true
-    }
-});
 
 const Workout = mongoose.model("Workout", workoutSchema);
 
